@@ -24,17 +24,31 @@
 
 <core-scroll-header-panel flex condenses>
 
+  <!-- update condensedHeaderHeight https://github.com/Polymer/core-scroll-header-panel/blob/master/demos/demo9.html -->
+
   <core-toolbar class="tall">
     <!-- TODO: finish the core-toolbar nav-menu -->
     <!-- TODO: replace icons with font-awesome icons? -->
-    <font-awesome icon="home"></font-awesome>
-    <core-icon-button icon="arrow-back"></core-icon-button>
+    <font-awesome icon="home" size="2x"></font-awesome>
+
     <div flex></div>
     <core-icon-button icon="search"></core-icon-button>
     <core-icon-button icon="more-vert"></core-icon-button>
+    <div class="title"><h1><%= ustr.titleize(title) %></h1></div>
 
-    <div class="bottom indent title"><h1><%= ustr.titleize(title) %></h1></div>
-    <paper-shadow id="myShadow" z="2"></div>
+    <div class="bottom fit" horizontal layout>
+
+      <paper-tabs selected="0" style="width: 400px;">
+
+        <paper-tab>ITEM ONE</paper-tab>
+        <paper-tab>ITEM TWO</paper-tab>
+        <paper-tab>ITEM THREE</paper-tab>
+
+      </paper-tabs>
+
+    </div>
+
+    <paper-shadow id="myShadow" z="2"></paper-shadow>
   </core-toolbar>
 
   <!-- TODO: update body for each page -->
